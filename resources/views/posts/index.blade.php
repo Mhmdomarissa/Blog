@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>INDEX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Create Post</a>
+                    <a class="nav-link active" aria-current="page" href="#">All Post</a>
                 </li>
 
             </ul>
@@ -23,7 +23,7 @@
 </nav>
 <div class="container mt-4">
     <div class="text-center">
-        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-success">Create posts</button>
     </div>
 
     <table class="table">
@@ -44,9 +44,9 @@
                 <td>{{$posts['posted_by']}}</td>
                 <td>{{$posts['created_at']}}</td>
                 <td>
-                    <button type="button" class="btn btn-info">View</button>
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <a href="/posts/{{$posts['id']}}"   <button type="button" class="btn btn-info">View</button> </a>
+                    <a href=""  <button type="button" class="btn btn-primary">Edit</button> </a>
+                    <a href=""   <button type="button" class="btn btn-danger">Delete</button> </a>
 
                 </td>
             </tr>
