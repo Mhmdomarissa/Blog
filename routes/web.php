@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/test' , [\App\Http\Controllers\TestController::class , 'testAction']);
+Route::get('/posts' , [\App\Http\Controllers\PostController::class , 'index']);

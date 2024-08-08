@@ -39,10 +39,10 @@
         <tbody>
         @foreach($posts as $posts)
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{$posts['id']}}</th>
+                <td>{{$posts['title']}}</td>
+                <td>{{$posts['posted_by']}}</td>
+                <td>{{$posts['created_at']}}</td>
                 <td>
                     <button type="button" class="btn btn-info">View</button>
                     <button type="button" class="btn btn-primary">Edit</button>
