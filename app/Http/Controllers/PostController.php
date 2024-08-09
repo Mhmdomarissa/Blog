@@ -23,4 +23,24 @@ class PostController extends Controller
         ;
         return view('posts.show',['post'=>$singlePost]);
     }
+    public function create()
+    {
+        return view('posts.create');
+    }
+    public function store()
+    {
+//        $request = request();
+//        dd($request->all());
+
+        $data = request()->all();
+        $title = $data['title'];
+        $description = $data['description'];
+        $post_creator = $data['post_creator'];
+//        return $data ;
+//        dd($data , $post_creator , $title , $description);
+        return to_route('posts.index');
+    }
+    public function edit($postId){
+        return view('posts.edit',['post'=>$postId]);
+    }
 }
