@@ -1,8 +1,9 @@
 @extends('layout.app');
 @section('title') Edit @endsection
 @section('content')
-    <form method="POST" action="" class="mt-4">
+    <form method="POST" action="{{route('posts.update',1)}}" class="mt-4">
         @csrf
+        @method('put')
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Title</label>
             <input name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
@@ -20,7 +21,7 @@
         </select>
 
         <br>
-        <button type="button" class="btn btn-primary">Update</button
+        <button  class="btn btn-primary">Update</button>
     </form>
 
 

@@ -40,7 +40,20 @@ class PostController extends Controller
 //        dd($data , $post_creator , $title , $description);
         return to_route('posts.index');
     }
-    public function edit($postId){
-        return view('posts.edit',['post'=>$postId]);
+    public function edit(){
+        return view('posts.edit');
+    }
+    public function update()
+    {
+//        $request = request();
+//        dd($request->all());
+
+        $data = request()->all();
+        $title = $data['title'];
+        $description = $data['description'];
+        $post_creator = $data['post_creator'];
+//        return $data ;
+      //  dd($data , $post_creator , $title , $description);
+        return to_route('posts.show',1);
     }
 }
