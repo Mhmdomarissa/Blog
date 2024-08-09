@@ -56,4 +56,8 @@ class PostController extends Controller
       //  dd($data , $post_creator , $title , $description);
         return to_route('posts.show',1);
     }
+    public function destroy()
+    {
+        return route('posts.index');
+    }
 }
